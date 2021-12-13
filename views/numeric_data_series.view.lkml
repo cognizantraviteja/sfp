@@ -95,9 +95,9 @@ view: numeric_data_series {
     sql: ${TABLE}.value ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [cloud_tag_name, tag_name]
+  measure: sum {
+    type: sum
+    sql: ${TABLE}.value ;;
   }
 }
 
