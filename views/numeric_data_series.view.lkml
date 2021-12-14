@@ -99,10 +99,7 @@ view: numeric_data_series {
     type: sum
     sql: ${TABLE}.value ;;
   }
-  measure: Availability {
-    type: string
-    sql: distinct (10780/10800) ;;
-  }
+
 }
 
 # The name of this view in Looker is "Numeric Data Series Meta Kv"
