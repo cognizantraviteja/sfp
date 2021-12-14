@@ -101,7 +101,7 @@ view: numeric_data_series {
   }
   measure: Availability {
     type: string
-    sql: (10780/10800) ;;
+    sql: distinct (10780/10800) ;;
   }
 }
 
