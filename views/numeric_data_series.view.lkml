@@ -94,7 +94,10 @@ view: numeric_data_series {
     type: string
     sql: ${TABLE}.value ;;
   }
-
+  dimension: valueint {
+    type: number
+    sql: ${TABLE}.value ;;
+  }
   measure: sum {
     type: sum
     sql: ${TABLE}.value ;;
@@ -102,13 +105,14 @@ view: numeric_data_series {
 
   measure: Availability {
     type: string
-    sql: distinct (10780 / 10800) ;;
+    sql: distinct ((10670 / 10800) * 100) ;;
     }
 
     measure: Performance {
       type: string
-      sql: distinct ((SUM(${TABLE}.value ))/540) ;;
+      sql: distinct (((SUM(${TABLE}.value ))/540)*100) ;;
     }
+
 
 }
 
