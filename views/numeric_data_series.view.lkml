@@ -25,6 +25,8 @@ view: numeric_data_series {
       raw,
       time,
       date,
+      minute,
+      second,
       week,
       month,
       quarter,
